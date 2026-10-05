@@ -5,6 +5,61 @@
         padding-right: 20px;
     }
 
+    .filter-product-wrapper {
+        position: relative;
+        display: block;
+    }
+
+    .filter {
+        display: none;
+    }
+
+    .filter.is-open {
+        position: absolute;
+        z-index: 5;
+        top: 54px;
+        left: 0;
+        display: block;
+        width: min(100%, 360px);
+        padding: 20px;
+        border: 1px solid #eee;
+        border-radius: 12px;
+        background: #fff;
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    .shop-toolbar {
+        justify-content: space-between;
+        margin-bottom: 18px;
+    }
+
+    .shop-toolbar-controls {
+        gap: 14px;
+    }
+
+    .mobile-filter {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 40px;
+        padding: 0 16px;
+        border: 1px solid #dedede;
+        border-radius: 6px;
+        background: #fff;
+        color: #222;
+        font: inherit;
+        cursor: pointer;
+    }
+
+    .card-wrapper {
+        --cols: 2 !important;
+        gap: 24px 16px;
+    }
+
+    .card-changer {
+        display: none;
+    }
+
     .navbar {
         padding: 18px 0;
     }
@@ -139,6 +194,39 @@
         width: 100%;
         padding-left: 16px;
         padding-right: 16px;
+    }
+
+    .shop-heading {
+        font-size: 36px;
+    }
+
+    .shop-sort > button {
+        font-size: 14px;
+    }
+
+    .shop-toolbar-controls {
+        gap: 8px;
+    }
+
+    .card-wrapper {
+        gap: 22px 12px;
+    }
+
+    .shop-cards img {
+        border-radius: 6px;
+    }
+
+    .card-text {
+        gap: 3px;
+        padding-top: 10px;
+    }
+
+    .card-text p {
+        font-size: 14px;
+    }
+
+    .card-text span {
+        font-size: 14px;
     }
 
     .first-heading {

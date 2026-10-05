@@ -86,7 +86,7 @@ if (t_cards.length && p_button && n_button) {
             showcard();
         }
     });
-    
+
     p_button.addEventListener('click', () => {
         if (start > 0) {
             start--;
@@ -125,8 +125,43 @@ document.querySelectorAll('.brnad-filter').forEach(box => {
 document.querySelectorAll('.collection').forEach(box => {
     const icon = box.querySelector('.c-icon')
     const lists = box.querySelector('.c-b-two');
-    icon.addEventListener('click', ()=>{
+    icon.addEventListener('click', () => {
         icon.classList.toggle('show')
         lists.classList.toggle('show')
     })
 })
+
+const changerBtns = document.querySelectorAll('.card-changer [data-col]');
+const cardWrapper = document.querySelector('.card-wrapper');
+const mobileFilterBtn = document.querySelector('.mobile-filter');
+const shopFilter = document.querySelector('.filter');
+
+if (mobileFilterBtn && shopFilter) {
+    mobileFilterBtn.addEventListener('click', () => {
+        const isOpen = shopFilter.classList.toggle('is-open');
+        mobileFilterBtn.setAttribute('aria-expanded', String(isOpen));
+    });
+}
+
+if (cardWrapper) {
+    changerBtns.forEach(btn => {
+        const changeColumns = () => {
+            cardWrapper.style.setProperty('--cols', btn.dataset.col);
+
+            changerBtns.forEach(b => {
+                b.classList.remove('active');
+                b.setAttribute('aria-pressed', 'false');
+            });
+            btn.classList.add('active');
+            btn.setAttribute('aria-pressed', 'true');
+        };
+
+        btn.addEventListener('click', changeColumns);
+        btn.addEventListener('keydown', event => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                changeColumns();
+            }
+        });
+    });
+}
