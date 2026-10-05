@@ -4,7 +4,8 @@ let hour = document.querySelector('.hour')
 let minute = document.querySelector('.minute')
 let second = document.querySelector('.second')
 
-const targetdate = new Date("November 1 2026 00:00:00:00").getTime()
+
+const targetdate = new Date("November 1 2026 00:00:00").getTime()
 function timer() {
     const newdate = new Date().getTime();
     const distance = targetdate - newdate;
@@ -27,7 +28,10 @@ function timer() {
     }
 }
 
-setInterval(timer, 1000);
+if (day && hour && minute && second) {
+    timer();
+    setInterval(timer, 1000);
+}
 
 const items = document.querySelectorAll('.new-arrival-head ul li');
 
@@ -73,17 +77,56 @@ function showcard() {
         }
     })
 }
-n_button.addEventListener('click', () => {
-    if (start < t_cards.length - 1) {
-        start++;
-        showcard()
-    }
-})
 
-p_button.addEventListener('click', () => {
-    if (start > 0) {
-        start--;
-        showcard()
-    }
+if (t_cards.length && p_button && n_button) {
+
+    n_button.addEventListener('click', () => {
+        if (start < t_cards.length - 1) {
+            start++;
+            showcard();
+        }
+    });
+    
+    p_button.addEventListener('click', () => {
+        if (start > 0) {
+            start--;
+            showcard()
+        }
+    })
+    showcard()
+}
+
+// Shop search
+
+const searchAppear = document.querySelector('#search');
+const searchShow = document.querySelector('.search-edit');
+const searchClose = document.querySelector('.search-close');
+
+if (searchAppear && searchShow && searchClose) {
+    searchAppear.addEventListener('click', () => {
+        searchShow.classList.add('show');
+    })
+
+    searchClose.addEventListener('click', () => {
+        searchShow.classList.remove('show');
+    });
+}
+
+document.querySelectorAll('.brnad-filter').forEach(box => {
+    const icon = box.querySelector('.brnad-filter-icon');
+    const list = box.querySelector('.brand-filter-two');
+
+    icon.addEventListener('click', () => {
+        icon.classList.toggle('show');
+        list.classList.toggle('show');
+    });
+});
+
+document.querySelectorAll('.collection').forEach(box => {
+    const icon = box.querySelector('.c-icon')
+    const lists = box.querySelector('.c-b-two');
+    icon.addEventListener('click', ()=>{
+        icon.classList.toggle('show')
+        lists.classList.toggle('show')
+    })
 })
-showcard()
