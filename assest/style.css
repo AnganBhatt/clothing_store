@@ -867,11 +867,11 @@ a {
     display: inline-block;
     transform: rotate(180deg);
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .c-icon.show {
-    transform: rotate(0deg);
+    transform: rotateY(0deg);
 }
 
 .c-b-two {
