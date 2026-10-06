@@ -941,7 +941,7 @@ a {
     gap: 22px;
 }
 
-.shop-sort > button {
+.shop-sort>button {
     padding: 8px 0;
     border: 0;
     background: transparent;
@@ -1067,25 +1067,95 @@ a {
     border-radius: 50%;
 }
 
-.swatch-yellow { background-color: #f4cf27; }
-.swatch-black { background-color: #111; }
-.swatch-blue { background-color: #a9c7dc; }
-.swatch-pink { background-color: #f2cbd5; }
-.swatch-white { background-color: #fff; }
-.swatch-green { background-color: #b8d9b5; }
-.swatch-gray { background-color: #aeb8bf; }
-.swatch-navy { background-color: #12354e; }
-.swatch-cream { background-color: #f4eedf; }
-.swatch-lilac { background-color: #c3b4cf; }
-.swatch-brown { background-color: #846952; }
+.swatch-yellow {
+    background-color: #f4cf27;
+}
+
+.swatch-black {
+    background-color: #111;
+}
+
+.swatch-blue {
+    background-color: #a9c7dc;
+}
+
+.swatch-pink {
+    background-color: #f2cbd5;
+}
+
+.swatch-white {
+    background-color: #fff;
+}
+
+.swatch-green {
+    background-color: #b8d9b5;
+}
+
+.swatch-gray {
+    background-color: #aeb8bf;
+}
+
+.swatch-navy {
+    background-color: #12354e;
+}
+
+.swatch-cream {
+    background-color: #f4eedf;
+}
+
+.swatch-lilac {
+    background-color: #c3b4cf;
+}
+
+.swatch-brown {
+    background-color: #846952;
+}
 
 .shop-card-dotted img {
     object-position: left center;
 }
 
 @media (prefers-reduced-motion: reduce) {
+
     .shop-cards img,
     .card-changer span {
         transition: none;
     }
 }
+
+/*===========================product-css================================= */
+.product-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 3fr 6fr;
+}
+
+.small-img UL {
+    list-style: none;
+}
+
+.small-img ul li {
+    margin-bottom: 10px;
+    width: 70px;
+    height: 89px;
+}
+
+.small-img ul li.active {
+    border: 1px solid #000;
+    padding: 6px;
+    width: 70px;
+    height: 89px;
+}
+
+.small-img ul li img {
+    display: block;
+    width: 100%;
+}
+
+.big_img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 491px;
+    max-height: 655px;
+}
+

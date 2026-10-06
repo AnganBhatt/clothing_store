@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- Volkhov -->
+    <link href="https://fonts.googleapis.com/css2?family=Volkhov&display=swap" rel="stylesheet">
+
+    <!-- Jost -->
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+
+    <!-- Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assest/style.css">
+    <link rel="stylesheet" href="./assest/responsive.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg d-flex align-items-center p-4">
+        <div class="container">
+            <a class="main_logo" href="#">FASCO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                    <li class="nav-li">
+                        <a class="nav-link " aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-li">
+                        <a class="nav-link" href="./shop.html">Shop</a>
+                    </li>
+                    <li class="nav-li">
+                        <a class="nav-link active" href="#">product</a>
+                    </li>
+                    <li class="nav-li">
+                        <a class="nav-link" href="#">Packages</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                    <li class="nav-li" id="search">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_6_192)">
+                                <path
+                                    d="M17.877 16.4848L13.609 12.2168C13.5281 12.1359 13.4227 12.0938 13.3102 12.0938H12.8461C13.9535 10.8105 14.625 9.14062 14.625 7.3125C14.625 3.27305 11.352 0 7.3125 0C3.27305 0 0 3.27305 0 7.3125C0 11.352 3.27305 14.625 7.3125 14.625C9.14062 14.625 10.8105 13.9535 12.0938 12.8461V13.3102C12.0938 13.4227 12.1395 13.5281 12.2168 13.609L16.4848 17.877C16.65 18.0422 16.9172 18.0422 17.0824 17.877L17.877 17.0824C18.0422 16.9172 18.0422 16.65 17.877 16.4848ZM7.3125 12.9375C4.20469 12.9375 1.6875 10.4203 1.6875 7.3125C1.6875 4.20469 4.20469 1.6875 7.3125 1.6875C10.4203 1.6875 12.9375 4.20469 12.9375 7.3125C12.9375 10.4203 10.4203 12.9375 7.3125 12.9375Z"
+                                    fill="#484848" stroke="#484848" stroke-width="0.0351562" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_6_192">
+                                    <rect width="18" height="18.0009" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </li>
+                    <li class="nav-li">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_6_195)">
+                                <path
+                                    d="M13.5 11.875C12.3789 11.875 11.8398 12.5 10 12.5C8.16016 12.5 7.625 11.875 6.5 11.875C3.60156 11.875 1.25 14.2266 1.25 17.125V18.125C1.25 19.1602 2.08984 20 3.125 20H16.875C17.9102 20 18.75 19.1602 18.75 18.125V17.125C18.75 14.2266 16.3984 11.875 13.5 11.875ZM16.875 18.125H3.125V17.125C3.125 15.2656 4.64062 13.75 6.5 13.75C7.07031 13.75 7.99609 14.375 10 14.375C12.0195 14.375 12.9258 13.75 13.5 13.75C15.3594 13.75 16.875 15.2656 16.875 17.125V18.125ZM10 11.25C13.1055 11.25 15.625 8.73047 15.625 5.625C15.625 2.51953 13.1055 0 10 0C6.89453 0 4.375 2.51953 4.375 5.625C4.375 8.73047 6.89453 11.25 10 11.25ZM10 1.875C12.0664 1.875 13.75 3.55859 13.75 5.625C13.75 7.69141 12.0664 9.375 10 9.375C7.93359 9.375 6.25 7.69141 6.25 5.625C6.25 3.55859 7.93359 1.875 10 1.875Z"
+                                    fill="#484848" stroke="#484848" stroke-width="0.0390625" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_6_195">
+                                    <rect width="20" height="20" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </li>
+                    <li class="nav-li">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M18.3369 7.0659L13.264 6.32631L10.9967 1.72909C10.5904 0.909647 9.41332 0.89923 9.0036 1.72909L6.73624 6.32631L1.66332 7.0659C0.753597 7.19784 0.389014 8.31937 1.04874 8.96173L4.71887 12.5381L3.85082 17.5902C3.69457 18.5034 4.65638 19.1874 5.46193 18.7603L10.0001 16.3749L14.5383 18.7603C15.3439 19.184 16.3057 18.5034 16.1494 17.5902L15.2814 12.5381L18.9515 8.96173C19.6112 8.31937 19.2467 7.19784 18.3369 7.0659ZM13.4932 11.9548L14.3161 16.7603L10.0001 14.493L5.68415 16.7603L6.50707 11.9548L3.01401 8.55201L7.8404 7.85062L10.0001 3.47562L12.1598 7.85062L16.9862 8.55201L13.4932 11.9548Z"
+                                fill="#484848" />
+                        </svg>
+                    </li>
+                    <li class="nav-li">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_6_201)">
+                                <path
+                                    d="M15 5C15 2.24297 12.757 0 10 0C7.24297 0 5 2.24297 5 5H1.25V16.875C1.25 18.6009 2.6491 20 4.375 20H15.625C17.3509 20 18.75 18.6009 18.75 16.875V5H15ZM10 1.875C11.7231 1.875 13.125 3.27688 13.125 5H6.875C6.875 3.27688 8.27688 1.875 10 1.875ZM16.875 16.875C16.875 17.5643 16.3143 18.125 15.625 18.125H4.375C3.68574 18.125 3.125 17.5643 3.125 16.875V6.875H5V8.4375C5 8.95527 5.41973 9.375 5.9375 9.375C6.45527 9.375 6.875 8.95527 6.875 8.4375V6.875H13.125V8.4375C13.125 8.95527 13.5447 9.375 14.0625 9.375C14.5803 9.375 15 8.95527 15 8.4375V6.875H16.875V16.875Z"
+                                    fill="#484848" stroke="#484848" stroke-width="0.0390625" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_6_201">
+                                    <rect width="20" height="20" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="search-edit">
+        <div class="container big-search">
+            <input class="big-search-input" type="text" placeholder="search here">
+            <button class="search-close" aria-label="Close search">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 2L16 16M16 2L2 16" stroke="#484848" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
+    </section>
+    <main>
+
+        <section class="product_details">
+            <div class="container">
+                <div class="product-wrapper">
+                    <div class="small-img">
+                        <ul class="slider-img-list">
+                            <li class=" active"><img class="sider-img"
+                                    src="./assest/product_image/35_056fa070-83a6-4279-8627-bbb11aace6e8.jpg.png"
+                                    alt="side-image" loading="lazy"></li>
+                            <li class=" "><img class="sider-img" src="./assest/product_image/35h.jpg.png"
+                                    alt="side-image-1" loading="lazy"></li>
+                            <li class=" "><img class="sider-img"
+                                    src="./assest/product_image/35a_ec779b58-f23e-478c-b196-685009bbe4c6.jpg.png"
+                                    alt="side-image" loading="lazy"></li>
+
+
+                        </ul>
+                    </div>
+                    <div class="big_img">
+                        <img src="./assest/product_image/35_056fa070-83a6-4279-8627-bbb11aace6e8.jpg.png"
+                            class="big-image" alt="big image">
+                    </div>
+
+                    <div class="product_brief">
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="container">
+            <div class="d-flex justify-content-between">
+                <a class="main_logo" href="#">FASCO</a>
+                <div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script src="./assest/main.js"></script>
+</body>
+
+</html>
