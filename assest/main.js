@@ -168,13 +168,13 @@ if (cardWrapper) {
 
 let side_imgs = document.querySelectorAll('.small-img ul li');
 
-if(side_imgs){
+if (side_imgs) {
     side_imgs.forEach(side_img => {
         side_img.addEventListener('click', () => {
             side_imgs.forEach(style => {
                 style.classList.remove('active')
             })
-    
+
             side_img.classList.add('active')
         })
     })
@@ -183,11 +183,24 @@ if(side_imgs){
 
 let siderimg = document.querySelectorAll('.slider-img-list img');
 let main_img = document.querySelector('.big-image');
-if( siderimg && main_img){
+if (siderimg && main_img) {
     siderimg.forEach(sider => {
         sider.addEventListener('click', () => {
             main_img.src = sider.src
-    
+
         })
     })
 }
+
+let sizes = document.querySelectorAll('.sizing-box span')
+const box_design = document.querySelector('.sizes')
+const size_name_change = document.querySelector('.size')
+sizes.forEach(size => {
+    size.addEventListener('click', () => {
+        sizes.forEach(removes => {
+            removes.classList.remove('active')
+        })
+        size.classList.add('active')
+        size_name_change.innerHTML = size.innerHTML
+    })
+})
